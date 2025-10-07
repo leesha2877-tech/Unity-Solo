@@ -8,6 +8,12 @@ TagManager:
   - killzone
   - health
   - weapon
+  - weaponUI
+  - ui_pause
+  - ui_health
+  - ui_ammo
+  - ui_clip
+  - ui_fireMode
   layers:
   - Default
   - TransparentFX

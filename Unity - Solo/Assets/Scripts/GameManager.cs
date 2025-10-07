@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     Image healthBar;
     TextMeshProUGUI ammoCounter;
     TextMeshProUGUI clip;
-    TextMeshProUGUI fireMode;
 
     public bool isPaused = false;
 
@@ -32,7 +31,6 @@ public class GameManager : MonoBehaviour
             healthBar = GameObject.FindGameObjectWithTag("ui_health").GetComponent<Image>();
             ammoCounter = GameObject.FindGameObjectWithTag("ui_ammo").GetComponent<TextMeshProUGUI>();
             clip = GameObject.FindGameObjectWithTag("ui_clip").GetComponent<TextMeshProUGUI>();
-            fireMode = GameObject.FindGameObjectWithTag("ui_fireMode").GetComponent<TextMeshProUGUI>();
         }
     }
 
@@ -50,31 +48,7 @@ public class GameManager : MonoBehaviour
                 ammoCounter.text = "Ammo: " + player.currentWeapon.ammo;
                 clip.text = "Clip: " + player.currentWeapon.clip + " / " + player.currentWeapon.clipSize;
 
-                if (player.currentWeapon.fireModes >= 2)
-                {
-                    fireMode.gameObject.SetActive(true);
-
-                    switch (player.currentWeapon.weaponID)
-                    {
-                        case 1:
-                            {
-                                if (player.currentWeapon.currentFireMode == 0)
-                                    fireMode.text = "Fire Mode: Semi-Auto";
-
-                                else if (player.currentWeapon.currentFireMode == 1)
-                                    fireMode.text = "Fire Mode: Full Auto";
-
-                                break;
-                            }
-
-                        default:
-                            fireMode.gameObject.SetActive(false);
-                            break;
-                    }
-                }
-
-                else
-                    fireMode.gameObject.SetActive(false);
+                
             }
 
             else
