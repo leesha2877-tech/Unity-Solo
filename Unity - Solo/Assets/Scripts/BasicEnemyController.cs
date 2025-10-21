@@ -11,6 +11,8 @@ public class BasicEnemyController : MonoBehaviour
     [Header("Enemy Stats")]
     public int health = 5;
     public int maxHealth = 5;
+    
+    
 
 
 
@@ -42,6 +44,7 @@ public class BasicEnemyController : MonoBehaviour
             health--;
             Destroy(collision.gameObject);
         }
+      
     }
 
     
