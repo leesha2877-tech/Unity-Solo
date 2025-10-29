@@ -15,6 +15,7 @@ TagManager:
   - ui_clip
   - ui_fireMode
   - proj
+  - PORTAL
   layers:
   - Default
   - TransparentFX

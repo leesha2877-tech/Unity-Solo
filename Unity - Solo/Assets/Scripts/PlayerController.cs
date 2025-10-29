@@ -168,5 +168,10 @@ public class PlayerController : MonoBehaviour
         {
             health--;
         }
+        if (collision.gameObject.tag == "PORTAL")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
+
 }
